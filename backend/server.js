@@ -13,7 +13,10 @@ import { notFound, errorHandler } from './middleware/errorHandler.js';
 const app = express();
 app.set('trust proxy', 1); // correct client IPs behind Render/Railway/Nginx for rate limiting
 
-const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:5173').split(',').map((s) => s.trim());
+const allowedOrigins = [
+  ...(process.env.CLIENT_URL || 'http://localhost:5173').split(',').map((s) => s.trim()),
+  'https://zinghub-kerala.vercel.app',
+];
 
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(
