@@ -39,4 +39,4 @@ Until you upload images, the photos in `frontend/public/images` are shown.
 | GET | `/api/orders` | admin, list orders |
 
 ## Deploy
-Backend: Render/Railway (set env vars, `CLIENT_URL` = your site URL). Frontend: Vercel/Netlify with `API_URL=https://your-api/api`.
+Backend: Render/Railway (set env vars, `CLIENT_URL` = your site URL). Frontend: Vercel/Netlify with `API_URL=https://your-api` or `API_URL=https://your-api/api`; the frontend adds `/api` when it is missing.
