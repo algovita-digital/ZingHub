@@ -1,7 +1,7 @@
 const DEFAULT_PRODUCTION_API_URL = 'https://zinghub-backend-d1ue.onrender.com/api';
 const DEFAULT_API_URL = import.meta.env.DEV ? '/api' : DEFAULT_PRODUCTION_API_URL;
 
-export const API_URL = (import.meta.env.VITE_API_URL || DEFAULT_API_URL).replace(/\/$/, '');
+export const API_URL = (import.meta.env.API_URL || DEFAULT_API_URL).replace(/\/$/, '');
 
 const WA_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER || '').replace(/\D/g, '');
 const WA_FALLBACK = import.meta.env.VITE_WHATSAPP_FALLBACK || 'https://walink.me/7obq58';
